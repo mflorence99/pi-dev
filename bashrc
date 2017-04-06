@@ -1,5 +1,5 @@
-export PS1=" |\n\[\033[0;1;34m\] |                                                                                                   \r | \w \[\033[0m\]\n | \[\033[1;34m\]DEV \t => \[\033[0m\]"
-export PS2=" | \[\033[1;34m\]DEV \t => \[\033[0m\]"
+export PS1=" |\n\[\033[0;1;34m\] |                                                                                                   \r | \w \[\033[0m\]\n | \[\033[1;34m\]pi-dev \t => \[\033[0m\]"
+export PS2=" | \[\033[1;34m\]pi-dev \t => \[\033[0m\]"
 
 export DEV_DIR=/usr/src/app
 
