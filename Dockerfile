@@ -27,6 +27,15 @@ RUN apt-get update && apt-get install wiringpi
 # download and install make etc
 RUN apt-get update && apt-get install build-essential
 
+# install pre-built phantomjs
+# NOTE: phantomjs has hidden dependency
+# https://github.com/giakki/uncss/issues/165
+RUN apt-get update && apt-get install libfontconfig libicu52
+COPY phantomjs /usr/bin/
+
+# download and install angular-cli
+RUN npm install -g @angular/cli
+
 # we use this all the time, so try to get a nice looking bash
 COPY bashrc /root/.bashrc
 RUN chmod u+x /root/.bashrc
