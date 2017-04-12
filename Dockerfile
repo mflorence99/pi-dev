@@ -12,19 +12,19 @@ RUN apt-get update \
  && curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - \
  && apt-get install nodejs
 
-# download and install gulp
+# install gulp
 RUN npm install -g gulp
 
-# download and install typescript
+# install typescript
 RUN npm install -g typescript
 
-# download and install ts-node
+# install ts-node
 RUN npm install -g ts-node
 
-# download and install Wiring Pi
+# install Wiring Pi
 RUN apt-get update && apt-get install wiringpi
 
-# download and install make etc
+# install make etc
 RUN apt-get update && apt-get install build-essential
 
 # install pre-built phantomjs
@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install build-essential
 RUN apt-get update && apt-get install libfontconfig libicu52
 COPY phantomjs /usr/bin/
 
-# download and install angular-cli
+# install angular-cli
 RUN npm install -g @angular/cli
 
 # we use this all the time, so try to get a nice looking bash
