@@ -36,6 +36,12 @@ COPY phantomjs /usr/bin/
 # install angular-cli
 RUN npm install -g @angular/cli
 
+# install bower
+RUN npm install -g bower
+
+# install git
+RUN apt-get update && apt-get install git
+
 # we use this all the time, so try to get a nice looking bash
 COPY bashrc /root/.bashrc
 RUN chmod u+x /root/.bashrc
