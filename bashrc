@@ -3,6 +3,11 @@ export PS2=" | \[\033[1;34m\]pi-dev \t => \[\033[0m\]"
 
 export DEV_DIR=/usr/src/app
 
+# create ~/.ssh directory from ~/.ssh-orig and ~/.ssh-config
+mkdir -p ~/.ssh
+cp ~/.ssh-orig/* ~/.ssh
+cp ~/.ssh-config ~/.ssh/config
+
 # npm login via token
 echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > ~/.npmrc
 

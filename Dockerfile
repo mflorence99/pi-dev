@@ -42,6 +42,12 @@ RUN npm install -g bower
 # install git
 RUN apt-get update && apt-get install git
 
+# install mversion
+RUN npm install -g mversion
+
+# copy ssh-config
+COPY ssh-config /root/.ssh-config
+
 # we use this all the time, so try to get a nice looking bash
 COPY bashrc /root/.bashrc
 RUN chmod u+x /root/.bashrc
