@@ -17,5 +17,6 @@ alias less=more
 alias ll='ls --color=always -FGlAhp'
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | more'
 
-# project aliases
-source $DEV_DIR/pi-docker/scripts/pi-alias.sh
+# project path
+export PATH=$DEV_DIR/pi-docker/scripts:$PATH
+source pi-alias.sh
