@@ -19,6 +19,9 @@ RUN apt-get update \
 # install global node components
 RUN npm install -g bower mversion gulp typescript ts-node @angular/cli
 
+# additional: we'll ckean this up later
+RUN npm install -g polymer-cli@next
+
 # copy ssh-config
 COPY ssh-config /root/.ssh-config
 
